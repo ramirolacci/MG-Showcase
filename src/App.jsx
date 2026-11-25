@@ -102,16 +102,16 @@ function AnimatedNumber({ value, duration = 0.95, delay = 0.1, prefix = '', suff
   return <>{prefix}{displayValue}{suffix}</>;
 }
 
-// Rango temporal global del timeline (desde 1 de Mayo 2025 hasta 31 de Octubre 2026)
+// Rango temporal global del timeline (desde 1 de Mayo 2025 hasta 30 de Noviembre 2026)
 const timelineStart = new Date('2025-05-01T00:00:00').getTime();
-const timelineEnd = new Date('2026-10-31T23:59:59').getTime();
+const timelineEnd = new Date('2026-11-30T23:59:59').getTime();
 const totalTimelineSpan = timelineEnd - timelineStart;
 
 // Timeline helpers
 const toTime = (d, endOfDay) => new Date(d + (endOfDay ? 'T23:59:59' : 'T00:00:00')).getTime();
 const toPct = (t) => ((t - timelineStart) / totalTimelineSpan) * 100;
 
-const axisMonths = Array.from({ length: 18 }, (_, i) => {
+const axisMonths = Array.from({ length: 19 }, (_, i) => {
   const d = new Date(2025, 4 + i, 1);
   return { key: i, label: MONTHS[d.getMonth()], left: toPct(d.getTime()), isJan: d.getMonth() === 0 };
 }).map((m, i, arr) => ({ ...m, width: (arr[i + 1]?.left ?? 100) - m.left }));
@@ -187,6 +187,12 @@ export const techColors = {
   'Recharts': '#22B5BF',
   'Leaflet': '#199900',
   'BPM': '#FFB020',
+  'React 19': '#61DAFB',
+  'Tailwind CSS v4': '#38BDF8',
+  'Google Sheets API': '#34A853',
+  'Web Audio API': '#FF4D4D',
+  'Offline-First': '#3DD6A5',
+  'Analytics': '#FFB020',
 };
 
 // SLIDES INDEX:
@@ -194,7 +200,7 @@ export const techColors = {
 // 1: Línea de tiempo interactiva
 // 2: Hitos Clave de la Empresa
 // 3 .. 12: Desarrollos 2025 (Fichas individuales de proyectos 2025)
-// 13 .. 32: Desarrollos 2026 (Fichas individuales de proyectos 2026)
+// 13 .. 35: Desarrollos 2026 (Fichas individuales de proyectos 2026)
 // 33: Retorno de Inversión (ROI) & Ahorro Operativo para Mi Gusto
 // 34: Seniority & Evolución de Liderazgo (Semi Senior Technical Lead)
 // 35: Visión 2026—2027 & Cierre de Negocio
@@ -492,7 +498,7 @@ function Timeline({ go }) {
             {c.icon} {c.label} <b>{catCounts[k]}</b>
           </button>
         ))}
-        <span className="tl-total">{visible.length} proyectos · Mayo 2025 → Octubre 2026</span>
+        <span className="tl-total">{visible.length} proyectos · Mayo 2025 → Noviembre 2026</span>
       </div>
 
       <div className="tl-board">
@@ -1389,6 +1395,9 @@ export const projectKpis = {
   consolidado: { value: 100, metric: '100%', label: 'Consolidación diaria', type: 'bar', sublabel: 'Directorio' },
   mgops: { value: 100, metric: '1 Hub', label: 'Portal unificado', type: 'donut', sublabel: 'Centralización' },
   sensorial: { value: 100, metric: '100%', label: 'Protocolo INF-D003', type: 'donut', sublabel: 'Catas Bromatología' },
+  kpicentral: { value: 95, metric: 'Multi-Canal', label: 'Monitoreo en tiempo real', type: 'bar', sublabel: 'Delivery & Reseñas' },
+  halloween: { value: 100, metric: '100%', label: 'Cupos cubiertos', type: 'donut', sublabel: 'Viernes 13' },
+  iae2026: { value: 100, metric: 'Offline-First', label: 'Sync en tiempo real', type: 'bar', sublabel: 'Evento IAE 2026' },
 };
 
 // Mini Gráfico Donut (Torta circular animada con Motion)

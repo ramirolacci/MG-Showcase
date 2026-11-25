@@ -368,7 +368,7 @@ export const projects = [
     arch: 'Procesamiento de video puramente client-side vía Canvas y Web Audio sin costo cloud',
   },
 
-  // 12. Octubre 2026 (El más reciente hasta el día de hoy)
+  // 12. Octubre 2026
   {
     id: 'audit',
     name: 'MG AuditApp',
@@ -420,6 +420,47 @@ export const projects = [
     stack: ['React', 'TypeScript', 'Supabase', 'GSAP', 'Canvas API'],
     impact: 'Digitalización y trazabilidad estricta de catas de calidad bajo protocolo bromatológico',
     arch: 'Canvas interactivo para firmas, cálculo en tiempo real con GSAP y persistencia en Supabase',
+  },
+  {
+    id: 'kpicentral',
+    name: 'KPI Central',
+    emoji: '📊',
+    cat: 'ops',
+    start: '2026-10-19',
+    end: '2026-11-24',
+    tagline: 'Analítica multi-canal & monitoreo operativo',
+    desc: 'Plataforma integral de analítica y monitoreo operativo para Mi Gusto. Centraliza métricas de PedidosYa, Rappi, Mercado Delivery y reseñas multi-canal con semaforización en tiempo real, gestión de sucursales por supervisora, control de reclamos, análisis gráfico e importación de reportes.',
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Analytics'],
+    impact: 'Centralización operativa de delivery y reclamos con semaforización en tiempo real por supervisora',
+    arch: 'Tablero analítico reactivo multi-canal con semaforización dinámica e importación masiva de reportes',
+  },
+  {
+    id: 'halloween',
+    name: 'MG Halloween',
+    emoji: '🎃',
+    cat: 'marketing',
+    start: '2026-10-30',
+    end: '2026-10-31',
+    tagline: 'Landing inmersiva & reservas Noche de Cine',
+    desc: 'Landing page inmersiva y de alta conversión para la Noche de Cine: Viernes 13 en Mi Gusto Vicente López. Incluye fondo de video adaptativo, sistema de reservas con Google Sheets, contador de cupos dinámico, efectos de sonido con Web Audio API y diseño responsive optimizado para mobile y desktop.',
+    stack: ['React', 'Web Audio API', 'Google Sheets API', 'Tailwind CSS'],
+    impact: '100% de cupos agotados y experiencia interactiva de alta conversión para evento temático',
+    arch: 'Landing inmersiva con video adaptativo, Web Audio API y sync de reservas en Google Sheets',
+  },
+
+  // 13. Noviembre 2026 (El más reciente hasta el día de hoy)
+  {
+    id: 'iae2026',
+    name: 'IAE x Mi Gusto 2026',
+    emoji: '🏛️',
+    cat: 'marketing',
+    start: '2026-11-12',
+    end: '2026-11-12',
+    tagline: 'Captura ágil de participantes & sync Sheets',
+    desc: 'Plataforma web mobile-first desarrollada en React 19, TypeScript y Tailwind CSS v4 para la captura ágil de participantes en el evento IAE x Mi Gusto 2026. Incluye persistencia offline-first, sincronización en tiempo real con Google Sheets, panel administrativo y exportación de datos a Excel y PDF.',
+    stack: ['React 19', 'TypeScript', 'Tailwind CSS v4', 'Google Sheets API', 'Offline-First'],
+    impact: 'Captura ágil offline-first de asistentes y sincronización inmediata sin pérdida de datos',
+    arch: 'Arquitectura mobile-first offline con sincronización en tiempo real a Google Sheets y exportación local',
   },
 ];
 
