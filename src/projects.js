@@ -634,12 +634,28 @@ export const images = {
     '/shots/ConsolidadoDiario/Screenshot_8.png',
     '/shots/ConsolidadoDiario/Screenshot_9.png',
     '/shots/ConsolidadoDiario/Screenshot_10.png',
+    '/shots/ConsolidadoDiario/Screenshot_11.png',
   ],
   mgops: [
     '/shots/CentroOps/Screenshot_5.png',
     '/shots/CentroOps/Screenshot_6.png',
   ],
   sensorial: Array.from({ length: 7 }, (_, i) => `/shots/Sensorial/image${i + 1}.png`),
+  kpicentral: [
+    '/shots/KPICentral/Screenshot_5.png',
+    '/shots/KPICentral/Screenshot_6.png',
+    '/shots/KPICentral/Screenshot_7.png',
+    '/shots/KPICentral/Screenshot_8.png',
+  ],
+  halloween: [
+    '/shots/MGHalloween/Screenshot_5.png',
+    '/shots/MGHalloween/Screenshot_6.png',
+    '/shots/MGHalloween/Screenshot_7.png',
+  ],
+  iae2026: [
+    '/shots/IAE2026/iPhone-13-PRO-migusto.com.ar.png',
+    '/shots/IAE2026/iPhone-14-PRO-migusto.com.ar.png',
+  ],
 
   // Proyectos preexistentes con ajustes de orden especificados por el usuario:
   // En MG Orbital la foto principal debe ser la segunda (donde aparece la botonera)

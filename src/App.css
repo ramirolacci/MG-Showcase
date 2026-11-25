@@ -135,13 +135,13 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 4rem); margin: 0 0 .5rem; letter-spacing: -
 .tl-scroll::-webkit-scrollbar-thumb { background: #ffffff22; border-radius: 6px; }
 
 .tl-axis { position: sticky; top: 0; z-index: 6; flex: 0 0 auto; background: #120f10f2; backdrop-filter: blur(10px); border-bottom: 1px solid #ffffff14; }
-.tl-axis-inner { position: relative; height: 42px; margin: 0 1.4rem; }
+.tl-axis-inner { position: relative; height: 42px; margin: 0 clamp(7rem, 10vw, 12rem) 0 1.4rem; }
 .tl-year { position: absolute; top: 4px; padding-left: 6px; font-size: .68rem; font-weight: 800; letter-spacing: .22em; color: #ffb020; }
 .tl-month { position: absolute; bottom: 4px; height: 18px; line-height: 18px; padding-left: 6px; border-left: 1px solid #ffffff18; font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: #888; overflow: hidden; white-space: nowrap; }
 .tl-month.jan { color: #fff; border-left-color: #ffb020aa; }
 .tl-today-tag { position: absolute; top: 4px; transform: translateX(-50%); padding: 2px 7px; border-radius: 999px; background: #ff4d4d; color: #fff; font-size: .58rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; box-shadow: 0 0 12px #ff4d4d90; }
 
-.tl-canvas { position: relative; margin: 0 1.4rem; padding: .6rem 0 .6rem; flex: 1; min-height: 0; box-sizing: border-box; }
+.tl-canvas { position: relative; margin: 0 clamp(7rem, 10vw, 12rem) 0 1.4rem; padding: .6rem 0 .6rem; flex: 1; min-height: 0; box-sizing: border-box; }
 .tl-lanes { display: flex; flex-direction: column; justify-content: space-between; }
 .tl-chrono { display: block; flex: none; }
 .tl-grid { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
@@ -185,12 +185,6 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 4rem); margin: 0 0 .5rem; letter-spacing: -
   pointer-events: auto;
 }
 
-.tl-item.bar.is-flip .tl-label {
-  position: absolute;
-  right: 100%;
-  margin-right: 6px;
-  padding: 0;
-}
 
 .tl-canvas.has-hover .tl-item:not(.is-hover) { opacity: .25; filter: saturate(.4); }
 .tl-item.is-hover { z-index: 5; filter: brightness(1.15); }

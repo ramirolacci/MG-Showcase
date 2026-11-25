@@ -134,11 +134,9 @@ function layoutItem(p) {
   const labelW = (p.name.length + 3) * LABEL_CHAR + LABEL_PAD;
 
   const vStart = left;
-  const flip = left + labelW > 98.5;
-  const vEnd = flip ? (left + barW) : (left + Math.max(barW, labelW));
-  const packedStart = flip ? Math.max(0, left - labelW) : vStart;
+  const vEnd = left + Math.max(barW, labelW);
 
-  return { p, left, actualW, barW, flip, vStart: packedStart, vEnd };
+  return { p, left, actualW, barW, vStart, vEnd };
 }
 
 function pack(items) {
@@ -373,13 +371,13 @@ function Cover({ go }) {
 }
 
 function TlItem({ it, go, onHover, onLeave, active }) {
-  const { p, barW, flip } = it;
+  const { p, barW } = it;
   const idx = indexById[p.id];
   return (
     <button
       type="button"
       id={`tl-${p.id}`}
-      className={`tl-item bar${flip ? ' is-flip' : ''}${active ? ' is-hover' : ''}`}
+      className={`tl-item bar${active ? ' is-hover' : ''}`}
       style={{
         left: `${it.left}%`,
         width: `${barW}%`,
@@ -1485,6 +1483,9 @@ const VERTICAL_SHOT_EXACT = new Set([
   '/shots/degu/1.jpeg',
   // IAE
   '/shots/IAE/Screenshot_5.png',
+  // IAE 2026 (Capturas Mobile iPhone)
+  '/shots/IAE2026/iPhone-13-PRO-migusto.com.ar.png',
+  '/shots/IAE2026/iPhone-14-PRO-migusto.com.ar.png',
   // Ruleta Apertura
   '/shots/RuletaApertura/form.png',
   '/shots/RuletaApertura/landing.png',
